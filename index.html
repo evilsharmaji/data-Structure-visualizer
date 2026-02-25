@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSA Visualizer Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Data Structure Visualizer</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="visualizer.html">Structures</a>
+    <a href="visualizer.html">Algorithms</a>
+    <a href="control.html">Workspace</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Initializing Visualizer...</p>
+</div>
+
+<canvas id="particles"></canvas>
+
+<section class="video-hero">
+  <video autoplay muted loop playsinline class="fixed-video">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>Understand Data Structures Visually</h1>
+    <p>
+      A scientific visualization platform designed to build deep intuition 
+      about fundamental data structures through interactive simulation.
+    </p>
+    <button onclick="goTo('array')">Start Visualizing</button>
+  </div>
+</section>
+
+<section id="structures" class="cards">
+
+  <div class="card">
+    <h2>Array</h2>
+    <p class="definition">Contiguous memory structure enabling constant-time indexed access.</p>
+    <ul>
+      <li>Access: O(1)</li>
+      <li>Insertion: O(n)</li>
+      <li>Use: Static collections</li>
+    </ul>
+    <button onclick="goTo('array')">Visualize</button>
+  </div>
+
+  <div class="card">
+    <h2>Stack</h2>
+    <p class="definition">LIFO structure used in recursion and undo operations.</p>
+    <ul>
+      <li>Push/Pop: O(1)</li>
+      <li>Use: Expression evaluation</li>
+    </ul>
+    <button onclick="goTo('stack')">Visualize</button>
+  </div>
+
+  <div class="card">
+    <h2>Queue</h2>
+    <p class="definition">FIFO structure for scheduling and buffering.</p>
+    <ul>
+      <li>Enqueue/Dequeue: O(1)</li>
+      <li>Use: Task scheduling</li>
+    </ul>
+    <button onclick="goTo('queue')">Visualize</button>
+  </div>
+
+  <div class="card">
+    <h2>Linked List</h2>
+    <p class="definition">Nodes connected via pointers allowing dynamic memory usage.</p>
+    <ul>
+      <li>Insertion: O(1)</li>
+      <li>Search: O(n)</li>
+    </ul>
+    <button onclick="goTo('linkedlist')">Visualize</button>
+  </div>
+
+  <div class="card">
+    <h2>Hash Table</h2>
+    <p class="definition">Key-value storage using hashing for near constant-time operations.</p>
+    <ul>
+      <li>Average: O(1)</li>
+      <li>Use: Databases, caching</li>
+    </ul>
+    <button onclick="goTo('hash')">Visualize</button>
+  </div>
+
+  <div class="card">
+    <h2>Binary Tree</h2>
+    <p class="definition">Hierarchical structure where each node has at most two children.</p>
+    <ul>
+      <li>Traversal operations</li>
+      <li>Use: Searching, sorting</li>
+    </ul>
+    <button onclick="goTo('bst')">Visualize</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>Designed for deep algorithmic understanding | © 2026</p>
+</footer>
+
+<div class="chatbot">
+  <div class="chat-header">DSA Assistant</div>
+  <div class="chat-body">
+    <p>Hello — Ask about any data structure.</p>
+  </div>
+  <input placeholder="Ask something..." />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

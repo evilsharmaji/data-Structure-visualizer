@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DSA Visualizer Workspace</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">DSA Visualizer</div>
+</header>
+
+<div class="workspace">
+
+  <!-- CONTROL PANEL -->
+  <aside class="controls">
+
+    <h3>Controls</h3>
+
+    <label>Select Structure:</label>
+    <select onchange="loadStructure(this.value)">
+      <option value="">Choose...</option>
+      <option value="array">Array</option>
+      <option value="stack">Stack</option>
+      <option value="queue">Queue</option>
+      <option value="linkedlist">Linked List</option>
+      <option value="hash">Hash Table</option>
+      <option value="bst">Binary Tree</option>
+    </select>
+
+    <input type="number" id="value" placeholder="Enter value">
+
+    <button onclick="insert()">Insert</button>
+    <button onclick="remove()">Delete</button>
+    <button onclick="search()">Search</button>
+
+    <label>Speed</label>
+    <input type="range" min="1" max="10">
+
+  </aside>
+
+  <!-- VISUAL AREA -->
+  <main class="visual-area">
+    <div id="canvas"></div>
+    <div id="history" class="history-panel"></div>
+  </main>
+
+</div>
+
+<!-- ANALYSIS PANEL -->
+
+<section class="analysis">
+
+  <div class="code">
+    <h3>Algorithm</h3>
+    <pre id="codeBlock"></pre>
+  </div>
+
+  <div class="complexity" id="complexity"></div>
+
+</section>
+
+<script src="visualizer.js"></script>
+
+</body>
+</html>

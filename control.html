@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DSA Visualizer Workspace</title>
+
+<link rel="stylesheet" href="control.css">
+</head>
+
+<body>
+
+<div class="panel">
+
+    <!-- LEFT CONTROL DOCK -->
+    <div class="controls">
+
+        <h2>Visualizer Control</h2>
+
+        <select id="structure">
+            <option>Array</option>
+            <option>Linked List</option>
+            <option>Stack</option>
+            <option>Queue</option>
+            <option>Hash Table</option>
+            <option>Binary Search Tree</option>
+        </select>
+
+        <select id="algorithm">
+            <option>Traversal</option>
+            <option>Search</option>
+            <option>Insertion</option>
+            <option>Deletion</option>
+        </select>
+
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+
+        <label>Speed</label>
+        <input type="range" id="speed" min="1" max="10" value="5">
+
+    </div>
+
+    <!-- CENTER VISUAL CANVAS -->
+    <div class="canvas-area">
+        <canvas id="visualCanvas" width="900" height="600"></canvas>
+    </div>
+
+    <!-- RIGHT INTELLIGENCE PANEL -->
+    <div class="info">
+
+        <h2>Explanation</h2>
+        <p id="explainText">
+            Select a data structure and algorithm to begin visualization.
+        </p>
+
+        <h2>Complexity</h2>
+        <div id="complexity">
+            Time: —<br>
+            Space: —
+        </div>
+
+        <h2>Pseudocode</h2>
+        <pre id="pseudo"></pre>
+
+    </div>
+
+</div>
+<script src="treeGraphEngine.js"></script>
+<script src="control.js"></script>
+
+</body>
+</html>
